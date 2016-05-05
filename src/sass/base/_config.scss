@@ -1,0 +1,75 @@
+// =============================================================================
+// Config
+// =============================================================================
+
+
+// Colours
+// =============================================================================
+
+$color--brand         : #a34d88 !default;
+$color--accessibility : #c09 !default;
+$color--brand-bg      : rgba($color--brand, .35) !default;
+
+$color--background    : #171717 !default;
+$color--font          : #efefef !default;
+
+
+// Document
+// =============================================================================
+
+$line-height--base : 1.6em !default;
+
+$link-color--base  : darken($color--font, 10%) !default;
+$link-color--hover : darken($link-color--base, 25%) !default;
+
+
+// Images
+// =============================================================================
+
+$img-dir : '/themes/app/img';
+
+
+// Typography
+// =============================================================================
+
+$font-size--base     : 16px !default;
+$line-height--base   : 1.62em !default;
+
+$font-family--sans   : 'Droid Sans', sans-serif !default;
+$font-family--serif  : serif !default;
+$font-family--mono   : monospace !default;
+
+$font-family--base   : $font-family--sans !default;
+$font-family--header : 'sansation_lightlight', $font-family--serif !default;
+
+$heading--color      : $color--font !default;
+$heading--weight     : 400 !default;
+
+$base-spacing        : $font-size--base !default;
+$base-spacing-large  : $base-spacing*2 !default;
+$base-spacing-small  : $base-spacing/2 !default;
+
+$list--margin        : auto auto 1em 1.5em;
+$list--padding       : auto auto auto 0;
+$list--line-height   : 2em;
+
+
+// Views
+// =============================================================================
+
+$view--small  : 0 !default;
+$view--medium : 40.063em !default;
+$view--large  : 64.063em !default;
+
+
+// Grid
+// =============================================================================
+
+$grid--cols  : 12 !default;
+$grid--width : 62em !default;
+
+
+// Menu
+// =============================================================================
+
+$menu-animation-time: .3s;

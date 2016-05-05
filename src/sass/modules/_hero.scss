@@ -1,0 +1,65 @@
+// =============================================================================
+// Hero
+// =============================================================================
+
+
+.hero {
+    text-align: center;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 17.5em;
+    color: $color--font;
+
+    &--full {
+        height: 100vh;
+    }
+
+    &--some {
+        height: 25vh;
+    }
+
+    &--half {
+        height: 50vh;
+    }
+
+    &--majority {
+        height: 75vh;
+    }
+
+    &--style {
+        background-color: $color--brand;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &--home {
+        background-image: url($img-dir + '/pink-embed.png')
+    }
+
+    &__title {
+        font-size: 4em;
+
+        > span {
+            color: $color--brand;
+        }
+    }
+
+    &__content {
+        $base-bg-color: rgba(0, 0, 0, .2);
+
+        background-color: $base-bg-color;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 1em;
+        padding-top: 1em;
+
+        &--fade {
+            background-image: linear-gradient($base-bg-color, $color--background);
+        }
+    }
+
+}

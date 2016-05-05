@@ -1,0 +1,36 @@
+// =============================================================================
+// Reset
+// =============================================================================
+// Sets the `border-box` model and 0 margins to all elementsand applies `block`
+// to all block type elements.
+
+
+* {
+    &,
+    &:before,
+    &:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+    display: block;
+}

@@ -1,0 +1,159 @@
+// =============================================================================
+// Site
+// =============================================================================
+//
+// We use the naming convention of `.site-*` for global modules like the header,
+// main, and footer.
+//
+// Sometimes it's beneficial to have a wrapping element around the site,
+// directly following the `<body>`. In this case, we call that `.site`.
+
+
+.site {
+    &:before {
+        content: ' ';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 5px solid #a34d88;
+        z-index: 9;
+    }
+}
+
+
+// Header
+// =============================================================================
+
+.site-header {
+    background: $color--background;
+    background-color: rgba($color--background, .55);
+    height: 55px;
+    margin-top: 5px;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    position: absolute;
+    width: 100%;
+    transition: background-color $menu-animation-time;
+    transform: translate3d(0, 0, 0);
+    z-index: 4;
+
+    a,
+    a span {
+        transition: all $menu-animation-time;
+    }
+
+    &--fixed {
+        background-color: rgba($color--background, .9);
+        position: fixed;
+        top: -55px;
+        transition: all $menu-animation-time;
+    }
+
+    &--visible {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    .gpx--logo,
+    .gpx--logo--full {
+        float: left;
+        height: 40px;
+        margin-right: .5em;
+        width: 40px;
+    }
+
+    .gpx--logo--full {
+        width: 200px;
+    }
+
+    &__logo {
+        color: $color--font;
+        display: inline-block;
+        float: left;
+        font-family: $font-family--header;
+        font-size: 1.75em;
+        line-height: 1.4em;
+        border: 0;
+        border-color: transparent;
+
+        span {
+            color: $color--brand;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color--brand;
+
+            span {
+                color: $color--font;
+            }
+        }
+    }
+
+    &__nav-button {
+        float: right;
+    }
+
+    &__blurb {
+        color: #eee;
+        font-family: $font-family--header;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    &--nav-visible {
+        background-color: rgba($color--background, 0);
+
+        a.title,
+        a.title span,
+        a:hover,
+        a.title:hover span
+    {
+            color: $color--font;
+        }
+    }
+}
+
+
+// Nav
+// =============================================================================
+
+.site-nav {
+
+    &__menu {
+        @include mq-width-more-than($view--medium) {
+            display: none;
+        }
+
+        .no-js & {
+            display: none;
+        }
+    }
+}
+
+
+// Main
+// =============================================================================
+
+.site-main {
+    line-height: 1.6em;
+    padding: 4em 0;
+    text-align: justify;
+
+    .home & {
+        padding: 0;
+    }
+}
+
+
+// Footer
+// =============================================================================
+
+.site-footer {
+    clear: both;
+    font-family: $font-family--header;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    text-align: center;
+}

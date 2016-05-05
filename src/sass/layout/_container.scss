@@ -1,0 +1,15 @@
+// =============================================================================
+// Container
+// =============================================================================
+
+
+%container,
+.container {
+    @include cf;
+    margin: 0 auto;
+    width: 90%;
+
+    @include mq-width-more-than($grid--width) {
+        max-width: $grid--width;
+    }
+}

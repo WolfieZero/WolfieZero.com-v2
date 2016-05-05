@@ -1,0 +1,61 @@
+// =============================================================================
+// Graphic
+// =============================================================================
+// Images displays as background images
+
+
+.gpx {
+
+    // Variables
+    // =========================================================================
+
+    $img-uri: '../img';
+
+
+    // Mixins
+    // =========================================================================
+
+
+    @mixin img($file) {
+        background-image: url('#{$img-uri}/#{$file}');
+    }
+
+    @mixin pos($x, $y) {
+        background-position: $x $y;
+    }
+
+    @mixin size($width, $height: $width) {
+        height: $height;
+        width: $width;
+    }
+
+    @mixin svg($svg, $fallback) {
+        background-image: url('#{$img-uri}/#{$fallback}');
+        background-image: none, url('#{$img-uri}/#{$svg}');
+    }
+
+
+    // Graphic defaults
+    // =========================================================================
+
+    @include text-hide;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+
+
+    // Graphics
+    // =========================================================================
+
+    &--logo {
+        @include size(100px);
+        @include svg('logo.svg', 'logo.png');
+    }
+
+    &--logo--full {
+        @include size(495px, 100px);
+        @include svg('logo--full.svg', 'logo.png');
+    }
+
+}

@@ -1,0 +1,31 @@
+// =============================================================================
+// Social
+// =============================================================================
+
+
+.social {
+    @include list--no-style;
+
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+
+    @include mq-width-more-than($view--medium) {
+        width: 40%;
+    }
+
+    &__item {
+        flex: 1;
+    }
+
+    a {
+        color: rgba($color--font, .75);
+        font-size: 2em;
+
+        &:hover {
+            color: $color--font;
+        }
+    }
+}

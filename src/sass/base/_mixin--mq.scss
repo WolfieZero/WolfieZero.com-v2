@@ -1,0 +1,42 @@
+// =============================================================================
+// Mixin: Media Queries
+// =============================================================================
+
+
+// Breakpoint Up
+// =============================================================================
+// Apply style from this point - mostly used in mobile first
+
+@mixin mq-width-more-than($size) {
+    @if $size == 0 {
+        @media only screen {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $size) {
+            @content;
+        }
+    }
+}
+
+
+// Breakpoint Down
+// =============================================================================
+// Apply styles till this point - mostly used in desktop first
+
+@mixin mq-width-less-than($size) {
+    @media only screen and (max-width: $size - .01) {
+        @content;
+    }
+}
+
+
+// Breakpoint Between
+// =============================================================================
+// Apply styles between these two points
+
+@mixin mq-between($size-from, $size-till) {
+    @media only screen and (min-width: $size-from) and (max-width: $size-till) {
+        @content;
+    }
+}

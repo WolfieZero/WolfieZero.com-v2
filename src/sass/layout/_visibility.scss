@@ -1,0 +1,526 @@
+// =============================================================================
+// Visibility
+// =============================================================================
+
+
+// Mixins
+// =============================================================================
+
+@mixin show {
+    display: inherit !important;
+}
+
+@mixin show--table {
+    display: table !important;
+}
+
+@mixin show--thead {
+    display: table-header-group !important;
+}
+
+@mixin show--tr {
+    display: table-row;
+}
+
+@mixin show--tbody {
+    display: table-row-group !important;
+}
+
+@mixin show--cell {
+    display: table-cell !important;
+}
+
+@mixin hide {
+    display: none !important;
+}
+
+@mixin visible {
+    clip: auto;
+    height: auto;
+    overflow: visible;
+    position: static !important;
+    width: auto;
+}
+
+@mixin hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+
+// Display
+// =============================================================================
+
+.display--hidden {
+    display: hidden;
+}
+
+.display--none {
+    display: none;
+}
+
+.display--block {
+    display: block;
+}
+
+
+// Small displays
+// =============================================================================
+
+@include mq-width-more-than($view--small) {
+    .show--small-only,
+    .show--small-up,
+    .show--small,
+    .show--small-down,
+    .hide--medium-only,
+    .hide--medium-up,
+    .hide--medium,
+    .show--medium-down,
+    .hide--large-only,
+    .hide--large-up,
+    .hide--large,
+    .show--large-down {
+        @include show;
+    }
+
+    .hide--small-only,
+    .hide--small-up,
+    .hide--small,
+    .hide--small-down,
+    .show--medium-only,
+    .show--medium-up,
+    .show--medium,
+    .hide--medium-down,
+    .show--large-only,
+    .show--large-up,
+    .show--large,
+    .hide--large-down {
+        @include hide;
+    }
+
+    .visible--small-only,
+    .visible--small-up,
+    .visible--small,
+    .visible--small-down,
+    .hidden--medium-only,
+    .hidden--medium-up,
+    .hidden--medium,
+    .visible--medium-down,
+    .hidden--large-only,
+    .hidden--large-up,
+    .hidden--large,
+    .visible--large-down {
+        @include visible;
+    }
+
+    .hidden--small-only,
+    .hidden--small-up,
+    .hidden--small,
+    .hidden--small-down,
+    .visible--medium-only,
+    .visible--medium-up,
+    .visible--medium,
+    .hidden--medium-down,
+    .visible--large-only,
+    .visible--large-up,
+    .visible--large,
+    .hidden--large-down {
+        @include hidden;
+    }
+
+    table {
+        .show--small-only,
+        .show--small-up,
+        .show--small,
+        .show--small-down,
+        .hide--medium-only,
+        .hide--medium-up,
+        .hide--medium,
+        .show--medium-down,
+        .hide--large-only,
+        .hide--large-up,
+        .hide--large,
+        .show--large-down {
+            @include show--table;
+        }
+    }
+
+    thead {
+        &.show--small-only,
+        &.show--small-up,
+        &.show--small,
+        &.show--small-down,
+        &.hide--medium-only,
+        &.hide--medium-up,
+        &.hide--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--thead;
+        }
+    }
+
+    tbody {
+        &.show--small-only,
+        &.show--small-up,
+        &.show--small,
+        &.show--small-down,
+        &.hide--medium-only,
+        &.hide--medium-up,
+        &.hide--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--tbody;
+        }
+    }
+
+    tr {
+        &.show--small-only,
+        &.show--small-up,
+        &.show--small,
+        &.show--small-down,
+        &.hide--medium-only,
+        &.hide--medium-up,
+        &.hide--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--tr;
+        }
+    }
+
+    th,
+    td {
+        &.show--small-only,
+        &.show--small-up,
+        &.show--small,
+        &.show--small-down,
+        &.hide--medium-only,
+        &.hide--medium-up,
+        &.hide--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--cell;
+        }
+    }
+
+}
+
+
+// Medium displays
+// =============================================================================
+
+@include mq-width-more-than($view--medium) {
+    .hide--small-only,
+    .show--small-up,
+    .hide--small,
+    .hide--small-down,
+    .show--medium-only,
+    .show--medium-up,
+    .show--medium,
+    .show--medium-down,
+    .hide--large-only,
+    .hide--large-up,
+    .hide--large,
+    .show--large-down,
+    .hide--xlarge-only {
+        @include show;
+    }
+
+    .show--small-only,
+    .hide--small-up,
+    .show--small,
+    .show--small-down,
+    .hide--medium-only,
+    .hide--medium-up,
+    .hide--medium,
+    .hide--medium-down,
+    .show--large-only,
+    .show--large-up,
+    .show--large,
+    .hide--large-down {
+        @include hide;
+    }
+
+    .hidden--small-only,
+    .visible--small-up,
+    .hidden--small,
+    .hidden--small-down,
+    .visible--medium-only,
+    .visible--medium-up,
+    .visible--medium,
+    .visible--medium-down,
+    .hidden--large-only,
+    .hidden--large-up,
+    .hidden--large,
+    .visible--large-down {
+        @include visible;
+    }
+
+    .visible--small-only,
+    .hidden--small-up,
+    .visible--small,
+    .visible--small-down,
+    .hidden--medium-only,
+    .hidden--medium-up,
+    .hidden--medium,
+    .hidden--medium-down,
+    .visible--large-only,
+    .visible--large-up,
+    .visible--large,
+    .hidden--large-down {
+        @include hidden;
+    }
+
+    table {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.show--medium-only,
+        &.show--medium-up,
+        &.show--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--table;
+        }
+    }
+
+    thead {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.show--medium-only,
+        &.show--medium-up,
+        &.show--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--thead;
+        }
+    }
+
+    tbody {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.show--medium-only,
+        &.show--medium-up,
+        &.show--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--tbody;
+        }
+    }
+
+    tr {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.show--medium-only,
+        &.show--medium-up,
+        &.show--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--tr;
+        }
+    }
+
+    th,
+    td {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.show--medium-only,
+        &.show--medium-up,
+        &.show--medium,
+        &.show--medium-down,
+        &.hide--large-only,
+        &.hide--large-up,
+        &.hide--large,
+        &.show--large-down {
+            @include show--cell;
+        }
+    }
+
+}
+
+
+// Large displays
+// =============================================================================
+
+@include mq-width-more-than($view--large) {
+    .hide--small-only,
+    .show--small-up,
+    .hide--small,
+    .hide--small-down,
+    .hide--medium-only,
+    .show--medium-up,
+    .hide--medium,
+    .hide--medium-down,
+    .show--large-only,
+    .show--large-up,
+    .show--large,
+    .show--large-down {
+        @include show;
+    }
+
+    .show--small-only,
+    .hide--small-up,
+    .show--small,
+    .show--small-down,
+    .show--medium-only,
+    .hide--medium-up,
+    .show--medium,
+    .show--medium-down,
+    .hide--large-only,
+    .hide--large-up,
+    .hide--large,
+    .hide--large-down {
+        @include hide;
+    }
+
+    .hidden--small-only,
+    .visible--small-up,
+    .hidden--small,
+    .hidden--small-down,
+    .hidden--medium-only,
+    .visible--medium-up,
+    .hidden--medium,
+    .hidden--medium-down,
+    .visible--large-only,
+    .visible--large-up,
+    .visible--large,
+    .visible--large-down {
+        @include visible;
+    }
+
+    .visible--small-only,
+    .hidden--small-up,
+    .visible--small,
+    .visible--small-down,
+    .visible--medium-only,
+    .hidden--medium-up,
+    .visible--medium,
+    .visible--medium-down,
+    .hidden--large-only,
+    .hidden--large-up,
+    .hidden--large,
+    .hidden--large-down {
+        @include hidden;
+    }
+
+    table {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.hide--medium-only,
+        &.show--medium-up,
+        &.hide--medium,
+        &.hide--medium-down,
+        &.show--large-only,
+        &.show--large-up,
+        &.show--large,
+        &.show--large-down {
+            @include show--table;
+        }
+    }
+
+    thead {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.hide--medium-only,
+        &.show--medium-up,
+        &.hide--medium,
+        &.hide--medium-down,
+        &.show--large-only,
+        &.show--large-up,
+        &.show--large,
+        &.show--large-down {
+            @include show--thead;
+        }
+    }
+
+    tbody {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.hide--medium-only,
+        &.show--medium-up,
+        &.hide--medium,
+        &.hide--medium-down,
+        &.show--large-only,
+        &.show--large-up,
+        &.show--large,
+        &.show--large-down {
+            @include show--tbody;
+        }
+    }
+
+    tr {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.hide--medium-only,
+        &.show--medium-up,
+        &.hide--medium,
+        &.hide--medium-down,
+        &.show--large-only,
+        &.show--large-up,
+        &.show--large,
+        &.show--large-down {
+            @include show--tr;
+        }
+    }
+
+    th,
+    td {
+        &.hide--small-only,
+        &.show--small-up,
+        &.hide--small,
+        &.hide--small-down,
+        &.hide--medium-only,
+        &.show--medium-up,
+        &.hide--medium,
+        &.hide--medium-down,
+        &.show--large-only,
+        &.show--large-up,
+        &.show--large,
+        &.show--large-down {
+            @include show--cell;
+        }
+    }
+}

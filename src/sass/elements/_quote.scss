@@ -1,0 +1,27 @@
+// =============================================================================
+// Quote
+// =============================================================================
+
+
+blockquote {
+    font-style: italic;
+    margin: 0;
+}
+
+cite {
+    &:before {
+        content: '-';
+    }
+}
+
+
+
+
+
+// Pull Quote
+// =============================================================================
+// For when you want to break the quote of the standard content area somewhat.
+
+.pull-quote {
+    font-size: 2em;
+}

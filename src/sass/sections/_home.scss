@@ -1,0 +1,30 @@
+// =============================================================================
+// Home Page
+// =============================================================================
+
+
+.home {
+
+    .hero {
+        margin-bottom: 2em;
+        background-position: bottom;
+
+        &__blurb {
+            color: #eee;
+            font-family: $font-family--header;
+            font-size: 1.2em;
+            text-align: center;
+            width: 75%;
+            margin: 0 auto 1em;
+
+            @include mq-width-more-than($view--large) {
+                width: 75%;
+            }
+
+            > p {
+                margin: 0;
+            }
+        }
+    }
+
+}

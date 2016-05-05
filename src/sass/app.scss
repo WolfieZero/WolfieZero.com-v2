@@ -1,0 +1,79 @@
+// =============================================================================
+// main.css
+// =============================================================================
+//
+// Remove and add as need be. Normalize items are added in relevent element and
+// reset files so if not use then remove the file and the normalize effect is
+// also removed.
+
+
+// Base
+// =============================================================================
+// Foundations, mixins, functions and configs
+
+// Config
+@import 'base/config';
+@import 'base/fonts';
+
+// Functions
+@import 'base/function--conversions';
+
+// Mixins
+@import 'base/mixin--clearfix';
+@import 'base/mixin--mq';
+
+// Helpers
+@import 'base/helpers';
+
+
+// Elements
+// =============================================================================
+// Single elements
+
+@import 'elements/reset';
+@import 'elements/code';
+@import 'elements/document';
+//@import 'elements/form';
+@import 'elements/hr';
+@import 'elements/html5';
+@import 'elements/img';
+@import 'elements/link';
+@import 'elements/list';
+@import 'elements/quote';
+//@import 'elements/table';
+@import 'elements/typography';
+@import 'elements/wordpress';
+
+
+// Layout
+// =============================================================================
+
+//@import 'layout/simple-grid';
+//@import 'layout/media';
+//@import 'layout/vertical-align';
+//@import 'layout/visibility';
+@import 'layout/container';
+//@import 'layout/flex';
+
+
+// Modules
+// =============================================================================
+
+@import 'modules/article';
+//@import 'modules/button';
+@import 'modules/graphic';
+@import 'modules/hero';
+//@import 'modules/input';
+//@import 'modules/notice';
+@import 'modules/nav';
+//@import 'modules/popup';
+@import 'modules/site';
+//@import 'modules/slick';
+@import 'modules/social';
+//@import 'modules/video';
+
+
+// Sections
+// =============================================================================
+
+@import 'sections/home';

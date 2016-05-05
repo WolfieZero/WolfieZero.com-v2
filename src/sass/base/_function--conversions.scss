@@ -1,0 +1,36 @@
+// =============================================================================
+// Function: Conversions
+// =============================================================================
+
+
+// Turns a pixel (`px`) based size into relative EMs (`rem`)
+// =============================================================================
+
+@function rem($size) {
+    @if $size == 0 {
+        @return 0;
+    } @elseif (type-of($size) == number and unit($size) == px) {
+        @return ($size / $font-base-size) * 1rem;
+    } @else {
+        @return $size;
+    }
+}
+
+
+// Turns a pixel (`px`) based size into EMs (`em`)
+// =============================================================================
+
+@function em($size, $base: 0) {
+    @if $size == 0 {
+        @return 0;
+    } @elseif (type-of($size) == number and unit($size) == px) {
+        @if $base == 0 {
+            @return #{$size/$doc-font-size} * 1rem;
+        } @else {
+            @return #{$size/$base} * 1rem;
+        }
+    } @else {
+        @return $size;
+    }
+    @return #{$size/$doc-font-size}em;
+}

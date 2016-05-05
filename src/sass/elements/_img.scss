@@ -1,0 +1,80 @@
+// =============================================================================
+// Image
+// =============================================================================
+
+
+img {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle; // Remove the gap between images and the bottom of
+                            // their containers: h5bp.com/i/440
+//    width: 100%;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+
+
+
+// Placements
+// =============================================================================
+
+.img--right {
+    float: right;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.img--left {
+    float: left;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.img--center {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+// Fill Container
+// =============================================================================
+// Make the image fill the container area
+
+.img--fill {
+    width: 100%;
+}
+
+
+
+
+
+// Title Image
+// =============================================================================
+// Title images fit within a heading/title element
+
+.img--title {
+    height: .8em;
+    vertical-align: top;
+    width: auto;
+}
+
+
+
+
+
+// Circular Image
+// =============================================================================
+// A perfect circle
+
+.img--circle {
+    border-radius: 50%;
+}

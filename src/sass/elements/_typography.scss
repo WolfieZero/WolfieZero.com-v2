@@ -1,0 +1,155 @@
+// =============================================================================
+// Typography
+// =============================================================================
+
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: $font-size--base;
+}
+
+body {
+    @extend %font-base;
+    line-height: $line-height--base;
+}
+
+
+
+
+
+// Headings
+// =============================================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    color: $heading--color;
+    font-family: $font-family--header;
+    font-weight: $heading--weight;
+    margin: .5em 0;
+    text-rendering: optimizelegibility;
+}
+
+h1,
+.heading--1 {
+    font-size: 2.5em;
+}
+
+h2,
+.heading--2 {
+    font-size: 2em;
+}
+
+h3,
+.heading--3 {
+    font-size: 1.75em;
+}
+
+h4,
+.heading--4 {
+    font-size: 1.5em;
+}
+
+h5,
+.heading--5 {
+    font-size: 1.25em;
+}
+
+h5,
+.heading--6 {
+    font-size: 1em;
+}
+
+
+
+
+
+// Text
+// =============================================================================
+
+p {
+    margin: 1.5em 0;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+
+
+
+
+// Alignment
+// =============================================================================
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+@mixin text-hide {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.text-hide {
+    @include text-hide;
+}

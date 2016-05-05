@@ -1,0 +1,38 @@
+// =============================================================================
+// Media
+// =============================================================================
+
+
+.media {
+    $side-margin: 1em;
+
+    @include cf;
+
+    display: block;
+    margin-bottom: 1em;
+
+    &__item {
+        display: inline-block;
+        float: left;
+        margin-right: $side-margin;
+
+        > img {
+            display: block;
+        }
+
+        &--right {
+            float: right;
+            margin-left: $side-margin;
+            margin-right: auto;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+
+        &,
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

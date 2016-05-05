@@ -1,0 +1,111 @@
+// =============================================================================
+// Notice
+// =============================================================================
+
+
+.notice {
+
+    // @variables
+    // =========================================================================
+
+    $notice--color--error: #ffe6e6;
+    $notice--color--warning: #fcf7d8;
+    $notice--color--info: #e8f3ff;
+    $notice--color--success: #dafce1;
+
+
+    // Default
+    // =========================================================================
+
+    border-style: solid;
+    border-width: 1px;
+    line-height: 1.25;
+    margin-bottom: 2em;
+    padding: .5em 4em .5em .5em;
+    position: relative;
+
+    p {
+        margin: 0;
+    }
+
+
+
+
+
+    // Close buttons in alert
+    // =========================================================================
+
+    &__close {
+        cursor: pointer;
+        font-weight: 700;
+        opacity: .5;
+        position: absolute;
+        right: 1em;
+        text-decoration: none;
+        top: .5em;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+
+
+
+
+    // Modifiers
+    // =========================================================================
+
+
+    // @Mixin
+    // -------------------------------------------------------------------------
+
+    @mixin notice-colors ($color, $color-font: darken($color, 45%), $color-accent: darken($color, 50%)) {
+        background: $color;
+        border-color: $color-accent;
+        color: $color-font;
+
+        // Color of close button
+        .notice__close {
+            color:  $color-font;
+        }
+
+        // Color of line
+        &:after {
+            border-color:  $color-accent;
+        }
+    }
+
+
+    // Error
+    // -------------------------------------------------------------------------
+
+    &--error {
+        @include notice-colors($notice--color--error);
+    }
+
+
+    // Warning
+    // -------------------------------------------------------------------------
+
+    &--warning {
+        @include notice-colors($notice--color--warning, darken($notice--color--warning, 70%));
+    }
+
+
+    // Info
+    // -------------------------------------------------------------------------
+
+    &--info {
+        @include notice-colors($notice--color--info);
+    }
+
+
+    // Success
+    // -------------------------------------------------------------------------
+
+    &--success {
+        @include notice-colors($notice--color--success, darken($notice--color--success, 70%));
+    }
+}

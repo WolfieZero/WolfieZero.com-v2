@@ -1,0 +1,50 @@
+// =============================================================================
+// Buttons
+// =============================================================================
+
+
+.button {
+    -webkit-appearance: none;
+    background-color: darken($color--background, 25%);
+    border: 3px solid transparent;
+    color: #333;
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.75em;
+    margin: 0;
+    padding: .3em .5em;
+    text-align: center;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:hover {
+        border-color: transparent;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: 0 0 .5em $color--accessibility;
+        outline: 0;
+    }
+
+    &:disabled {
+        color: darken(#ddd, 15%);
+    }
+
+
+    // Button Modifiers
+    // =========================================================================
+
+    &--full {
+        display: block;
+        width: 100%;
+    }
+}

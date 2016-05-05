@@ -1,0 +1,283 @@
+// =============================================================================
+// Article
+// =============================================================================
+
+
+.article {
+    height: 100%;
+    min-height: 100%;
+
+    a {
+        &,
+        &:hover,
+        &:focus {
+            border-bottom-color: $link-color--base;
+        }
+    }
+
+    &__title {
+        color: #eee;
+        font-family: $font-family--header;
+        font-size: 3em;
+        line-height: 1em;
+        text-align: center;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+
+        &:after {
+            content: ' ';
+            width: 25%;
+            display: block;
+            margin: .25em auto;
+            border-bottom: 1px solid rgba($color--font, .15);
+        }
+    }
+
+    &__meta {
+        font-size: .7em;
+        margin: 0;
+
+        abbr[title] {
+            border-bottom: 0;
+        }
+
+        &:before,
+        &:after {
+            border-top: 1px solid rgba(255, 255, 255, .5);
+            content: ' ';
+            display: inline-block;
+            margin-left: 1em;
+            margin-right: 1em;
+            padding-top: .3em;
+            width: 1%;
+        }
+    }
+
+    &__footer {
+        font-size: .75rem;
+    }
+
+    &__blurb {
+        margin: 0;
+    }
+
+    &__content {
+        margin: 2em auto;
+        text-align: left;
+
+        li:before {
+            content: '';
+            margin-left: 1em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 1.5em;
+        }
+
+        p, ul, ol, dl, h1, h2, h3, h4, h5, h6, pre, table  {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+
+            ul, ol, dl {
+                width: 80%;
+            }
+
+            @include mq-width-more-than($view--medium) {
+                width: 75%;
+            }
+
+            @include mq-width-more-than($view--large) {
+                width: 45rem;
+            }
+        }
+
+        .single__embed {
+            margin-bottom: 2em;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2em;
+            text-align: center;
+        }
+
+        .full {
+            //border-bottom: 5px solid rgba($color--brand, .5);
+            //border-top: 5px solid rgba($color--brand, .5);
+            margin-bottom: 2em;
+            margin-top: 2em;
+            position: relative;
+            width: 100%;
+
+            img {
+
+                margin: 0;
+            }
+
+            &--fitted {
+                max-height: 60vh;
+                overflow: hidden;
+
+                img {
+                    position: relative;
+                    padding: 0;
+                    margin-top: -25%;
+                }
+            }
+
+            &--overlay:after {
+                $base-bg-color--top: rgba($color--background, .2);
+                $base-bg-color--bottom: rgba($color--background, .75);
+                content: ' ';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: linear-gradient($base-bg-color--top, $base-bg-color--bottom);
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        @include mq-width-more-than($view--medium) {
+            img.alignleft {
+                margin-left: -4em;
+            }
+
+            img.alignright {
+                margin-right: -4em;
+            }
+        }
+    }
+}
+
+
+// Article List
+// =============================================================================
+
+.article-list {
+    @include cf;
+
+    text-align: center;
+
+    &__header {
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+        color: #fff;
+        margin: .5em 0 1.5em;
+        padding: .5em 0;
+        text-align: center;
+    }
+}
+
+
+// Aticle Nav
+// =============================================================================
+
+.articles-nav {
+
+    &__button {
+        width: 40%;
+        display: inline-block;
+    }
+
+    a {
+        background-color: $color--brand-bg;
+        border: 1px solid #111;
+        color: rgba($color--font, .75);
+        display: block;
+        font-family: $font-family--header;
+        font-weight: $heading--weight;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding: .5em;
+        text-decoration: none;
+        text-transform: lowercase;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color--font;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Article Item
+// =============================================================================
+
+.article-item {
+    background-color: rgba($color--brand, 1);
+    background-position: center center;
+    background-size: cover;
+    margin: 1em 0;
+    position: relative;
+    width: 100%;
+
+    &:nth-child(3) {
+        background-color: rgba($color--brand, .8);
+    }
+
+    &:nth-child(4) {
+        background-color: rgba($color--brand, .6);
+    }
+
+    &:nth-child(5) {
+        background-color: rgba($color--brand, .4);
+    }
+
+    &:nth-child(6) {
+        background-color: rgba($color--brand, .2);
+    }
+
+    &:nth-child(7) {
+        background-color: rgba($color--brand, .0);
+    }
+
+    a {
+        background-color: $color--background;
+        background-color: rgba($color--background, .5);
+        color: #fff;
+        display: block;
+        padding: 2em 2em 1.5em;
+        position: relative;
+        text-decoration: none;
+        z-index: 2;
+    }
+
+    &__excerpt {
+        text-align: left;
+    }
+
+    &__title,
+    &__blurb,
+    &__meta {
+        color: #eee;
+        margin: 0;
+    }
+
+    &__meta {
+        font-size: .7em;
+
+        &:before,
+        &:after {
+            content: ' ';
+            display: inline-block;
+            width: 1%;
+            margin-left: .5em;
+            margin-right: .5em;
+            padding-top: .3em;
+            border-top: 1px solid rgba(255, 255, 255, .5);
+        }
+    }
+
+    &--more {
+        @include cf;
+
+        width: 100%;
+
+        a {
+            padding: 1em;
+        }
+    }
+}

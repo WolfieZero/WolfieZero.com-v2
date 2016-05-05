@@ -1,0 +1,19 @@
+// =============================================================================
+// Horizontal Rule
+// =============================================================================
+
+
+hr {
+    -moz-box-sizing: content-box;
+    border: 0;
+    border-bottom: 1px solid rgba($color--font, .15);
+    box-sizing: content-box;
+    display: block;
+    height: 0;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+
+    .article & {
+        width: 25%;
+    }
+}

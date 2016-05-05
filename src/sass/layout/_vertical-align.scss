@@ -1,0 +1,28 @@
+// =============================================================================
+// Vertical Align
+// =============================================================================
+
+
+%vertical-align,
+.vertical-align {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    > * {
+        display: table-cell;
+        height: 100%;
+    }
+
+    &__top {
+        vertical-align: top;
+    }
+
+    &__middle {
+        vertical-align: middle;
+    }
+
+    &__bottom {
+        vertical-align: bottom;
+    }
+}

@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WolfieZero</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <style>
     @font-face {
         font-family: 'sansation_lightlight';
@@ -94,6 +92,28 @@
         <a href="https://medium.com/@wolfiezero/"><i class="fa fa-medium"></i></a>
       </p>
   </div>
+
+<noscript id="deferred">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</noscript>
+
+<script>
+    var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById('deferred');
+        var replacement = document.createElement('div');
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame ||
+                mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame ||
+                msRequestAnimationFrame;
+    if (raf) raf(function() {
+        window.setTimeout(loadDeferredStyles, 0);
+    });
+    else window.addEventListener('load', loadDeferredStyles);
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

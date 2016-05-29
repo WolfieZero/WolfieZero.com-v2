@@ -632,7 +632,7 @@ a img.aligncenter {
     background-position: center;
     background-size: cover; }
   .hero--home {
-    background-image: url("/themes/app/img/pink-embed.png"); }
+    background-image: url("/themes/app/img/bg-home.svg"); }
   .hero__title {
     font-size: 4em; }
     .hero__title > span {

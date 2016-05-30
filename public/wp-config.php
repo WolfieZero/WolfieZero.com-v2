@@ -91,6 +91,12 @@ define('WP_DEBUG_DISPLAY', env('WP_DEBUG', false));
 define('SCRIPT_DEBUG', env('WP_DEBUG', false));
 
 
+// Plugin Options
+// =============================================================================
+
+define('WP_CACHE', true); // Enable W3 Total Cache
+
+
 // Absolute path to the WordPress directory.
 // =============================================================================
 

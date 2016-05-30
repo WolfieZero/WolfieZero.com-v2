@@ -27,25 +27,30 @@ get_header(); ?>
     </div>
 </article>
 
-<main class="site-main container">
 
-    <section class="article-list" id="blog">
+<?php if (wp_count_posts()->publish > 0) : ?>
+    <main class="site-main container">
 
-        <h2 class="article-list__header">Blog</h2>
+        <section class="article-list" id="blog">
 
-        <?php
-            wp_reset_query();
-            get_template_part('partials/loop', 'posts');
-        ?>
+            <h2 class="article-list__header">Blog</h2>
 
-        <?php if (count($post) > 5) : ?>
-            <nav class="articles-nav">
-                <a href="/blog/page/2/" class="articles-nav__more">More Blogs...</a>
-            </nav>
-        <?php endif; ?>
+            <?php
+                wp_reset_query();
+                get_template_part('partials/loop', 'posts');
+            ?>
 
-    </section>
+            <?php if (wp_count_posts()->publish > 5) : ?>
+                <nav class="articles-nav">
+                    <a href="/blog/page/2/" class="articles-nav__more">More Blogs...</a>
+                </nav>
+            <?php endif; ?>
 
-</main>
+        </section>
+
+    </main>
+<?php else : ?>
+    <div style="margin-top: -10rem;"></div>
+<?php endif; ?>
 
 <?php get_footer(); ?>

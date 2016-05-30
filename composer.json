@@ -38,8 +38,8 @@
         }
     ],
     "scripts": {
-        "post-update-cmd": "@updateIndex",
-        "updateIndex": "php bootstrap/composer/update-index.php",
+        "post-update-cmd": "@index",
+        "index": "php bootstrap/composer/update-index.php",
         "post-root-package-install": "@env",
         "env":  [
             "php -r \"copy('.env.example', '.env');\"",

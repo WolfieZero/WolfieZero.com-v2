@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e1a72a01deeec8a73d5f230c903bd6a6",
-    "content-hash": "65e0567fa504db50c21ce9ecc14f35de",
+    "hash": "bab9973bb8202ec95f7b437416eb31b5",
+    "content-hash": "237cb576a7d7ea30fc86cf1d881a1827",
     "packages": [
         {
             "name": "composer/installers",
@@ -645,7 +645,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.7.zip",
-                "reference": null,
+                "reference": "tags/4.4.7",
                 "shasum": null
             },
             "require": {
@@ -665,7 +665,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/prism.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -673,6 +673,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/prism/"
+        },
+        {
+            "name": "wpackagist-plugin/w3-total-cache",
+            "version": "0.9.4.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
+                "reference": "tags/0.9.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
         },
         {
             "name": "wpackagist-plugin/wp-markdown-editor",
@@ -685,7 +705,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-markdown-editor.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -785,7 +805,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/demo-data-creator.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {

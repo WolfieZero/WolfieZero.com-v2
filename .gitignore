@@ -32,3 +32,10 @@ public/index.html
 public/plugins/*
 !public/plugins/app-*
 !public/plugins/w3tc-wp-loader.php
+
+
+# Cache
+# ==============================================================================
+
+public/cache
+public/w3tc-config

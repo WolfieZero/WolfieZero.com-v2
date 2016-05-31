@@ -95,6 +95,7 @@ define('SCRIPT_DEBUG', env('WP_DEBUG', false));
 // =============================================================================
 
 define('WP_CACHE', true); // Enable W3 Total Cache
+define('W3TC_EDGE_MODE', true); // Enable W3 Total Cache Edge Mode
 
 
 // Absolute path to the WordPress directory.

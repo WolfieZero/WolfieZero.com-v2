@@ -10,7 +10,7 @@ get_header(); ?>
     <div class="hero__content hero__content--fade">
         <div class="container">
             <h1 class="hero__title">Wolfie<span>Zero</span></h1>
-            <p class="hero__blurb">I'm <strong>Neil Sweeney</strong>. A web/app developer by day. Plays video games. Listens to punk loudly. Thinks animals are pretty awesome. I have a thing about being a type 1 diabetic.</p>
+            <p class="hero__blurb"><?php echo strip_tags(get_the_content()); ?></p>
             <?php get_template_part('partials/social'); ?>
         </div>
     </div>
@@ -33,7 +33,7 @@ get_header(); ?>
 
         <section class="article-list" id="blog">
 
-            <h2 class="article-list__header">Blog</h2>
+            <!--<h2 class="article-list__header">Blog</h2>-->
 
             <?php
                 wp_reset_query();

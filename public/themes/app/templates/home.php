@@ -10,7 +10,7 @@ get_header(); ?>
     <div class="hero__content hero__content--fade">
         <div class="container">
             <h1 class="hero__title">Wolfie<span>Zero</span></h1>
-            <p class="hero__blurb"><?php echo strip_tags(get_the_content()); ?></p>
+            <p class="hero__blurb"><?php echo str_replace(['<p>', '</p>'], '', get_the_content()); ?></p>
             <?php get_template_part('partials/social'); ?>
         </div>
     </div>

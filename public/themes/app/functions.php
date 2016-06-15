@@ -5,6 +5,12 @@
 // All functions that are essental to the design and not the site
 
 
+// Includes
+// =============================================================================
+
+include 'lib/custom-fields.php';
+
+
 // Actions
 // =============================================================================
 
@@ -40,7 +46,7 @@ class AppTheme {
 
     /**
      * jQuery version number.
-     * 
+     *
      * @var  string
      */
     private static $jquery_version = '2.2.0';

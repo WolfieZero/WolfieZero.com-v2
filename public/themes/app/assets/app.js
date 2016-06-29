@@ -5,8 +5,6 @@
 
 (function ($) {
 
-    console.log('asd');
-
     // Full screen nav
     // =========================================================================
 
@@ -29,7 +27,6 @@
             // If going up...
             if (currentTop > 0 && $siteheader.hasClass('site-header--fixed')) {
                 $siteheader.addClass('site-header--visible');
-                console.log('show');
             } else {
                 $siteheader.removeClass('site-header--visible site-header--fixed');
             }

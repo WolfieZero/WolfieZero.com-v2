@@ -2,8 +2,6 @@
 
 (function ($) {
 
-    console.log('asd');
-
     // Full screen nav
     // =========================================================================
 
@@ -26,14 +24,13 @@
             // If going up...
             if (currentTop > 0 && $siteheader.hasClass('site-header--fixed')) {
                 $siteheader.addClass('site-header--visible');
-                console.log('show');
             } else {
                 $siteheader.removeClass('site-header--visible site-header--fixed');
             }
         } else {
             // If going down...
             $siteheader.removeClass('site-header--visible');
-            if( currentTop > headerHeight && !$('.site-header').hasClass('site-header--fixed')) {
+            if (currentTop > headerHeight && !$('.site-header').hasClass('site-header--fixed')) {
                 $siteheader.addClass('site-header--fixed');
             }
         }

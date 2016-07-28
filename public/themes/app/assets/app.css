@@ -447,9 +447,6 @@ a img.aligncenter {
   .article__content {
     margin: 2em auto;
     text-align: left; }
-    .article__content li:before {
-      content: '';
-      margin-left: 1em; }
     .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6 {
       margin-top: 1.5em; }
     .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table {

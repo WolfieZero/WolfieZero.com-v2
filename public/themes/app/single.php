@@ -27,7 +27,7 @@ get_header();
 
     <header class="article__header hero hero--style<?php echo ' ' . $hero_style; ?>" style="background-image: url('<?php echo $featured_image_url; ?>');">
         <div class="<?php echo $hero_content_class; ?>">
-            <div class="content">
+            <div class="container">
                 <h1 class="article__title"><?php the_title(); ?></h1>
                 <div class="article__blurb">
                     <p class="article__meta"><?php the_date(); ?></p>

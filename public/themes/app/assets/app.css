@@ -550,7 +550,7 @@ a img.aligncenter {
     background-color: rgba(163, 77, 136, 0); }
   .article-item a {
     background-color: #171717;
-    background-color: rgba(23, 23, 23, 0.5);
+    background-color: rgba(23, 23, 23, 0.75);
     color: #fff;
     display: block;
     padding: 2em 2em 1.5em;

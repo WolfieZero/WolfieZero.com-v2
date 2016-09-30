@@ -1,7 +1,7 @@
 <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     query_posts([
-        'showposts' => 5,
+        'showposts' => get_option('posts_per_page'),
         'paged'     => $paged
     ]);
     $count_posts = wp_count_posts();

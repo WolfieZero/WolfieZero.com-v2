@@ -27,11 +27,3 @@
     </article>
 
 <?php endwhile; ?>
-
-<?php if ($published_posts > 5) : ?>
-    <nav class="articles-nav">
-        <span class="articles-nav__button">
-            <?php next_posts_link('Older posts'); ?>
-        </span>
-    </nav>
-<?php endif; ?>

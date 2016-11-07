@@ -7,7 +7,7 @@ the_post();
 
 $featured_image_url = '';
 $hero_style         = 'hero--some';
-$hero_content_class  = 'hero__content';
+$hero_content_class = 'hero__content';
 
 if (has_post_thumbnail()) {
     $thumb_id            = get_post_thumbnail_id();

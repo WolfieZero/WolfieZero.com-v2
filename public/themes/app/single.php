@@ -6,7 +6,7 @@
 the_post();
 
 $featured_image_url = '';
-$hero_style         = 'hero--half';
+$hero_style         = 'hero--some';
 $hero_content_class  = 'hero__content';
 
 if (has_post_thumbnail()) {

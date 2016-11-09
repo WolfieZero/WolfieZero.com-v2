@@ -8,6 +8,7 @@
     <?php wp_head(); ?>
     <link rel="stylesheet" href="/themes/app/assets/app.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans|PT+Sans+Caption">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/atom-one-dark.min.css">
 </head>
 <body <?php body_class('app site'); ?>>
 

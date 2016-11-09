@@ -41,7 +41,8 @@ class AppTheme {
      */
     private static $scripts = [
         'app' => '/../themes/app/assets/app.js',
-        'syntax-hilight' => 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert'
+        'highlight' => '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js',
+        'syntax-hilight' => '//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert'
     ];
 
     /**

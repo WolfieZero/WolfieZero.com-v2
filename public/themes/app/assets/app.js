@@ -1,2 +1,47 @@
-!function e(r,i,s){function t(n,a){if(!i[n]){if(!r[n]){var l="function"==typeof require&&require;if(!a&&l)return l(n,!0);if(o)return o(n,!0);var u=new Error("Cannot find module '"+n+"'");throw u.code="MODULE_NOT_FOUND",u}var d=i[n]={exports:{}};r[n][0].call(d.exports,function(e){var i=r[n][1][e];return t(i?i:e)},d,d.exports,e,r,i,s)}return i[n].exports}for(var o="function"==typeof require&&require,n=0;n<s.length;n++)t(s[n]);return t}({1:[function(e,r,i){"use strict";!function(e){var r=e(window),i=e(".site-header"),s=e(".site-header").height();e(".toggle-full-screen-nav").on("click",function(){e(".nav-icon").toggleClass("nav-icon--active"),e(".full-screen-nav").toggleClass("full-screen-nav--active"),e(".site-header").toggleClass("site-header--nav-visible"),e("body").toggleClass("no-scrolling")}),r.on("scroll",{previousTop:0},function(){var t=r.scrollTop();t<this.previousTop?t>0&&i.hasClass("site-header--fixed")?i.addClass("site-header--visible"):i.removeClass("site-header--visible site-header--fixed"):(i.removeClass("site-header--visible"),t>s&&!e(".site-header").hasClass("site-header--fixed")&&i.addClass("site-header--fixed")),this.previousTop=t})}(jQuery)},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
+//require('./partials/_fluid-video.js');
+
+(function ($) {
+
+    // Full screen nav
+    // =========================================================================
+
+    var $window = $(window);
+    var $siteheader = $('.site-header');
+    var headerHeight = $('.site-header').height();
+
+    $('.toggle-full-screen-nav').on('click', function () {
+        $('.nav-icon').toggleClass('nav-icon--active');
+        $('.full-screen-nav').toggleClass('full-screen-nav--active');
+        $('.site-header').toggleClass('site-header--nav-visible');
+        $('body').toggleClass('no-scrolling');
+    });
+
+    $window.on('scroll', { previousTop: 0 }, function () {
+        var currentTop = $window.scrollTop();
+
+        // If user is going up or down
+        if (currentTop < this.previousTop) {
+            // If going up...
+            if (currentTop > 0 && $siteheader.hasClass('site-header--fixed')) {
+                $siteheader.addClass('site-header--visible');
+            } else {
+                $siteheader.removeClass('site-header--visible site-header--fixed');
+            }
+        } else {
+            // If going down...
+            $siteheader.removeClass('site-header--visible');
+            if (currentTop > headerHeight && !$('.site-header').hasClass('site-header--fixed')) {
+                $siteheader.addClass('site-header--fixed');
+            }
+        }
+
+        this.previousTop = currentTop;
+    });
+})(jQuery);
+
+},{}]},{},[1]);
+
 //# sourceMappingURL=app.js.map

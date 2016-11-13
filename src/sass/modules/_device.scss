@@ -1,0 +1,123 @@
+// =============================================================================
+// Device
+// =============================================================================
+
+
+// Generic Device
+// =============================================================================
+
+.device {
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #999;
+
+    &,
+    &:after,
+    .device__screen {
+        transition: all 0.5s ease;
+    }
+
+    .device__screen {
+        transform: scale(0.5);
+        margin: 0;
+        border: 0;
+        width: 200%;
+        height: 200%;
+        transform-origin: 0 0;
+    }
+
+    &:after {
+        font-size: 35px;
+        content: '✯';
+        text-align: center;
+        position: absolute;
+        transform: rotate(-90deg);
+    }
+}
+
+
+// Desktop
+// =============================================================================
+
+.device__desktop {
+    width: 680px;
+    height: 450px;
+    padding: 1em 1em 4em;
+    border-radius: 1em;
+
+    &:after {
+        font-size: 35px;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        border-radius: 100em;
+    }
+
+}
+
+
+// Tablet
+// =============================================================================
+
+.device__tablet {
+    width: 384px;
+    height: 512px;
+    padding: 1em 1em 3em;
+    border-radius: 1em;
+
+    &:after {
+        font-size: 22px;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        border-radius: 100em;
+    }
+
+    &--landscape {
+        width: 512px;
+        height: 384px;
+        padding: 1em 3em 1em 1em;
+
+        &:after {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 662px;
+            transform: rotate(180deg);
+        }
+
+    }
+}
+
+
+// Phone
+// =============================================================================
+
+.device__phone {
+    width: 240px;
+    height: 420px;
+    padding: 1em 1em 3em;
+    border-radius: 1em;
+
+    &:after {
+        bottom: 10px;
+        left: 0;
+        right: 0;
+    }
+
+    &--landscape {
+        width: 420px;
+        height: 240px;
+        padding: 1em 3em 1em 1em;
+
+        &:after {
+            top: 0;
+            bottom: 42%;
+            left: 90%;
+            right: 0;
+            transform: rotate(180deg);
+        }
+
+    }
+
+}

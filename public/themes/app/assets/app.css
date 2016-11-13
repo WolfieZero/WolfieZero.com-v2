@@ -449,17 +449,17 @@ a img.aligncenter {
     text-align: left; }
     .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6 {
       margin-top: 1.5em; }
-    .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table {
+    .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table, .article__content .instagram-media {
       margin-left: auto;
       margin-right: auto;
       width: 90%; }
-      .article__content p ul, .article__content p ol, .article__content p dl, .article__content ul ul, .article__content ul ol, .article__content ul dl, .article__content ol ul, .article__content ol ol, .article__content ol dl, .article__content dl ul, .article__content dl ol, .article__content dl dl, .article__content h1 ul, .article__content h1 ol, .article__content h1 dl, .article__content h2 ul, .article__content h2 ol, .article__content h2 dl, .article__content h3 ul, .article__content h3 ol, .article__content h3 dl, .article__content h4 ul, .article__content h4 ol, .article__content h4 dl, .article__content h5 ul, .article__content h5 ol, .article__content h5 dl, .article__content h6 ul, .article__content h6 ol, .article__content h6 dl, .article__content pre ul, .article__content pre ol, .article__content pre dl, .article__content table ul, .article__content table ol, .article__content table dl {
+      .article__content p ul, .article__content p ol, .article__content p dl, .article__content ul ul, .article__content ul ol, .article__content ul dl, .article__content ol ul, .article__content ol ol, .article__content ol dl, .article__content dl ul, .article__content dl ol, .article__content dl dl, .article__content h1 ul, .article__content h1 ol, .article__content h1 dl, .article__content h2 ul, .article__content h2 ol, .article__content h2 dl, .article__content h3 ul, .article__content h3 ol, .article__content h3 dl, .article__content h4 ul, .article__content h4 ol, .article__content h4 dl, .article__content h5 ul, .article__content h5 ol, .article__content h5 dl, .article__content h6 ul, .article__content h6 ol, .article__content h6 dl, .article__content pre ul, .article__content pre ol, .article__content pre dl, .article__content table ul, .article__content table ol, .article__content table dl, .article__content .instagram-media ul, .article__content .instagram-media ol, .article__content .instagram-media dl {
         width: 80%; }
       @media only screen and (min-width: 40.063em) {
-        .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table {
+        .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table, .article__content .instagram-media {
           width: 75%; } }
       @media only screen and (min-width: 64.063em) {
-        .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table {
+        .article__content p, .article__content ul, .article__content ol, .article__content dl, .article__content h1, .article__content h2, .article__content h3, .article__content h4, .article__content h5, .article__content h6, .article__content pre, .article__content table, .article__content .instagram-media {
           width: 45rem; } }
     .article__content .single__embed {
       margin-bottom: 2em;

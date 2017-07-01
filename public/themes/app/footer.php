@@ -15,7 +15,7 @@
     <footer class="site-footer container">
         <p class="aligncenter">Copyright <?php echo date('Y'); ?> Neil Sweeney</p>
         <p class="aligncenter">
-            <a href="https://github.com/wolfiezero/wolfiezero.com/"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/wolfiezero/wolfiezero.com-v2/"><i class="fa fa-github" aria-hidden="true"></i></a>
             &nbsp; &nbsp;
             <a href="https://m.do.co/c/b09f57880a88"><i class="fa fa-cloud" aria-hidden="true"></i></a>
             &nbsp; &nbsp;
